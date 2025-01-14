@@ -6,7 +6,6 @@
 #include <utility>
 #include <thread>
 #include <mutex>
-#include <syncstream>
 
 std::mutex mut;
 
