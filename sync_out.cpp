@@ -26,10 +26,10 @@ std::ostream& sync_out(std::ostream& os, Args&& ... args) {
 }
 
 int main() {
-    std::thread t0 { [](){ sync_out(std::cout, "Good deeds are like water.\n"); } };
-    std::thread t1 { [](){ sync_out(std::cout, "Whater is good for all things, ", "and does not compete, \n"); } };
-    std::thread t2 { [](){ sync_out(std::cout, "and it is good, ", "for dealing with the evil of others, \n"); } };
-    std::thread t3 { [](){ sync_out(std::cout, "so it is few compared to the Tao.\n"); } };
+    std::thread t0 { [](){ sync_out(std::cout, 0, ": Good deeds are like water.\n"); } };
+    std::thread t1 { [](){ sync_out(std::cout, 1, ": Whater is good for all things, ", "and does not compete, \n"); } };
+    std::thread t2 { [](){ sync_out(std::cout, 2, ": and it is good, ", "for dealing with the evil of others, \n"); } };
+    std::thread t3 { [](){ sync_out(std::cout, 3, ": so it is few compared to the Tao.\n"); } };
 
     t0.join();
     t1.join();
